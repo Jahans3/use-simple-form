@@ -57,7 +57,7 @@ This rule enforces that a field have a truthy value.
 
 ```js
 rules: {
-  myField: rules.required('myField doesn\'t exist!')
+  myField: rules.required('myField requires a value!')
 }
 ```
 
@@ -83,6 +83,7 @@ Check against a pre-defined pattern by passing the name:
 rules.match('password');
 ```
 
+Or pass a custom pattern:
 ```js
 rules: {
   alphabet: rules.match(/^[A-Za-z]$/i, 'Not an alphabetical character!')
