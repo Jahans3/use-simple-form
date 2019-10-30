@@ -46,12 +46,60 @@ const form = useForm({
 ### Rules
 Rules are validation functions that can be applied at the field or form level.
 
+Note: All pre-defined rules can have the default error message overridden using the final argument of the rule function.
+
 ```js
 import { rules } from '@use-simple/form';
 ```
 
+###### `required`
+This rule enforces that a field have a truthy value.
+
+```js
+rules: {
+  myField: rules.required('myField doesn\'t exist!')
+}
+```
+
+###### `sameAs`
+This rule will attempt to match the value of one field to another.
+
+```js
+rules: {
+  password: rules.required(),
+  confirmPassword: rules.sameAs('password', 'Passwords must match!')
+}
+```
+
+###### `match`
+Attempts to match the input field value with either a pre-defined or given RegEx pattern.
+
+Currently there are only 2 pre-defined RegEx patterns:
+* `'email'`: Matches an email
+* `'password`: Matches a password with at least 1 uppercase, at least 1 lowercase, at least 1 number and at least 1 special character.
+
+Check against a pre-defined pattern by passing the name: 
+```js 
+rules.match('password');
+```
+
+```js
+rules: {
+  alphabet: rules.match(/^[A-Za-z]$/i, 'Not an alphabetical character!')
+}
+```
+
+###### `oneOf`
+This rule checks that the input value should match an element of a given array.
+
+```js
+rules: {
+  myField: rules.oneOf(['a', 'b', 'c'], 'Invalid character!')
+}
+```
+
 ##### Custom Rules
-This library includes some common rules that cover simple use cases. For more advanced use cases, a rule function should follow the below signature:
+This library includes some common rules that cover simple use cases. For more advanced use cases you may need to create your own, a rule function should follow the below signature:
 
 ```
 String => ?String
