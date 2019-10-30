@@ -1,0 +1,10 @@
+{
+  "name": "use-simple-form",
+  "version": "0.0.1",
+  "description": "Simple hooks-based form",
+  "main": "index.js",
+  "repository": "https://github.com/Jahans3/use-simple-form.git",
+  "author": "Joshua Jahans <josh.jahans3@gmail.com>",
+  "license": "MIT",
+  "private": false
+}

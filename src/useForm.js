@@ -19,11 +19,11 @@ function findValidationErrors(rules, value, form) {
 }
 
 export default function useForm({
-                                  onSubmit,
-                                  validate = [],
-                                  rules = {},
-                                  initialValues = {}
-                                }) {
+  onSubmit,
+  validate = [],
+  rules = {},
+  initialValues = {}
+}) {
   const [form, setForm] = useState(initialValues);
   const [errors, setErrors] = useState(
     Object.keys(initialValues).reduce((key, result) => ({
