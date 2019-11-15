@@ -9,7 +9,7 @@ yarn add use-simple-form
 
 ###### Import:
 ```js
-import { useForm } from '@use-simple/form';
+import { useForm } from 'use-simple-form';
 ```
 
 ###### Integrate:
@@ -49,7 +49,7 @@ Rules are validation functions that can be applied at the field or form level.
 Note: All pre-defined rules can have the default error message overridden using the final argument of the rule function.
 
 ```js
-import { rules } from '@use-simple/form';
+import { rules } from 'use-simple-form';
 ```
 
 ###### `required`

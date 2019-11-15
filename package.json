@@ -1,5 +1,5 @@
 {
-  "name": "@use-simple/form",
+  "name": "use-simple-form",
   "version": "0.0.1",
   "description": "Simple hooks-based form",
   "main": "index.js",
