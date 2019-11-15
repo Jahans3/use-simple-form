@@ -1,10 +1,30 @@
 {
-  "name": "use-simple-form",
+  "name": "@use-simple/form",
   "version": "0.0.1",
   "description": "Simple hooks-based form",
   "main": "index.js",
-  "repository": "https://github.com/Jahans3/use-simple-form.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jahans3/use-simple-form.git"
+  },
   "author": "Joshua Jahans <josh.jahans3@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/Jahans3/use-simple-form/issues"
+  },
+  "homepage": "https://github.com/Jahans3/use-simple-form#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "form",
+    "simple",
+    "form",
+    "use",
+    "simple",
+    "form"
+  ]
 }
