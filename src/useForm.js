@@ -48,6 +48,7 @@ export default function useForm({
         setError(name, undefined);
       }
     }
+
     setForm({ ...form, [name]: value });
   };
   const submitForm = (e) => {
@@ -72,5 +73,5 @@ export default function useForm({
     }
   };
 
-  return [getValue, setValue, submitForm, getError, setError, errors];
+  return { getValue, setValue, submitForm, getError, setError, errors };
 }
